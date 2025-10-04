@@ -44,15 +44,6 @@ export const GUIDE_BLOCKS: GuideBlock[] = [
       },
     ],
     quick: [
-        {
-        id: 'intro-resources',
-        title: 'Recursos para la Masterclass',
-        content: [
-            { type: 'paragraph', content: 'Aquí tienes los enlaces directos a los recursos mencionados para empezar.' },
-            { type: 'link', content: 'Consultas 1:1 gratuitas (20 min) - Calendly' },
-            { type: 'link', content: 'Documento Completo de la Masterclass' }
-        ]
-        }
     ]
   },
   {
