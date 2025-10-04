@@ -25,7 +25,7 @@ const renderContentItem = (item: any, key: number) => {
         );
       case 'link':
         return (
-          <a key={key} href={item.content as string} target="_blank" rel="noopener noreferrer" className="block mt-3 font-semibold text-sm text-emerald-600 hover:text-emerald-800">
+          <a key={key} href={item.url || "#"} target={item.url ? "_blank" : undefined} rel={item.url ? "noopener noreferrer" : undefined} className="block mt-3 font-semibold text-sm text-emerald-600 hover:text-emerald-800">
             {item.content} &rarr;
           </a>
         );
