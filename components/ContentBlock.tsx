@@ -41,10 +41,13 @@ const renderContentItem = (item: any, key: number, theme: any) => {
           </div>
       );
     case 'link':
-       const linkColor = theme.sidebarActiveText === 'text-indigo-600' ? 'text-indigo-600 hover:text-indigo-800' : 'text-emerald-600 hover:text-emerald-800';
+       const linkColor = theme.sidebarActiveText === 'text-indigo-600' ? 'indigo' : 'emerald';
+       const baseColor = linkColor === 'indigo' ? 'text-indigo-600' : 'text-emerald-600';
+       const bgColor = linkColor === 'indigo' ? 'bg-indigo-600' : 'bg-emerald-600';
       return (
-        <a key={key} href={item.url || "#"} target={item.url ? "_blank" : undefined} rel={item.url ? "noopener noreferrer" : undefined} className={`block mt-3 font-semibold text-sm ${linkColor}`}>
-          {item.content} &rarr;
+        <a key={key} href={item.url || "#"} target={item.url ? "_blank" : undefined} rel={item.url ? "noopener noreferrer" : undefined} className={`inline-block mt-3 font-semibold text-sm ${baseColor} relative overflow-hidden transition-all duration-300 ease-in-out border-b-2 border-current hover:text-white group`}>
+          <span className={`absolute inset-0 ${bgColor} transform scale-y-0 origin-bottom transition-transform duration-300 ease-in-out group-hover:scale-y-100`}></span>
+          <span className="relative z-10">{item.content} &rarr;</span>
         </a>
       );
     case 'os-tabs':
