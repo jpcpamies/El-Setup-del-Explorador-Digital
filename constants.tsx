@@ -174,7 +174,7 @@ export const GUIDE_BLOCKS: GuideBlock[] = [
               ]},
               { os: 'alternatives', title: 'Páginas Web Completas', content: [
                   { type: 'list', title: 'Extensión GoFullPage (Chrome/Edge)', content: [
-                      'Busca "GoFullPage" en la Chrome Web Store e instálala.',
+                      'Busca "<a href="https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?utm_source=ext_app_menu" target="_blank" rel="noopener noreferrer">GoFullPage</a>" en la Chrome Web Store e instálala.',
                       'Navega a la página que quieres capturar.',
                       'Haz clic en el icono de la extensión en tu barra de herramientas.',
                       'Descarga la imagen completa.'
