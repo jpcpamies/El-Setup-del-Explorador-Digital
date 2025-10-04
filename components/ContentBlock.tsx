@@ -43,7 +43,7 @@ const renderContentItem = (item: any, key: number, theme: any) => {
     case 'link':
        const linkColor = theme.sidebarActiveText === 'text-indigo-600' ? 'text-indigo-600 hover:text-indigo-800' : 'text-emerald-600 hover:text-emerald-800';
       return (
-        <a key={key} href="#" className={`block mt-3 font-semibold text-sm ${linkColor}`}>
+        <a key={key} href={item.url || "#"} target={item.url ? "_blank" : undefined} rel={item.url ? "noopener noreferrer" : undefined} className={`block mt-3 font-semibold text-sm ${linkColor}`}>
           {item.content} &rarr;
         </a>
       );

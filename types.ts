@@ -9,6 +9,7 @@ export interface ContentItem {
   content: string | string[];
   title?: string;
   lang?: string;
+  url?: string;
 }
 
 export interface OsSpecificContent {
